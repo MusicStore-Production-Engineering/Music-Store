@@ -2,7 +2,7 @@ package ro.unibuc.hello.dto;
 
 public class Product{
 
-    private String id;
+    private long id;
     private String productName;
     private String description;
     private String categories;
@@ -30,17 +30,17 @@ public class Product{
     }
 
 
-    public long getDescription() {
-        return Description;
+    public String getDescription() {
+        return description;
     }
     public void setCategories(String categories) {
         this.categories = categories;
     }
 
-    public long getCategories() {
+    public String getCategories() {
         return categories;
     }
 
-    
+
 
 }

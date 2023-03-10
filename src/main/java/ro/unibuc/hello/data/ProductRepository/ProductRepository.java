@@ -10,8 +10,8 @@ import org.springframework.stereotype.Repository;
  * Spring Data MongoDB automatically creates a class it implementing the interface when you run the application.
  */
 @Repository
-public interface InformationRepository extends MongoRepository<ProductEntity, String> {
+public interface ProductRepository extends MongoRepository<ProductEntity, String> {
 
     ProductEntity findByTitle(String productName);
-   
+    ProductEntity save(ProductEntity product);
 }

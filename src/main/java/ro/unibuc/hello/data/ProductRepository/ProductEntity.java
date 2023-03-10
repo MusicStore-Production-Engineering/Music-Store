@@ -7,23 +7,24 @@ public class ProductEntity {
     @Id
     public String id;
 
-    public String productName;
+    
     public String description;
     public String categories;
 
     public ProductEntity() {}
 
-    public ProductEntity(String productName, String description, String categories) {
-        this.productName = productName;
+    public ProductEntity(String description, String categories) {
+        
         this.description = description;
         this.categories = categories;
     }
+
 
     @Override
     public String toString() {
         return String.format(
                 "Product[productName='%s', description='%s', categories='%s']",
-                id, title, description, categories);
+                id, description, categories);
     }
 
 }

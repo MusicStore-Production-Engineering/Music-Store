@@ -8,14 +8,28 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import ro.unibuc.hello.dto.Product;
 import ro.unibuc.hello.exception.EntityNotFoundException;
+import ro.unibuc.hello.service.ProductService;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.http.ResponseEntity;
 
 
 @Controller
 public class ProductController {
 
+    
+
     @Autowired
     private ProductService productService;
 
     
+
+    @PostMapping("/products")
+ 
+    public ResponseEntity<Product> saveProduct(Product product)
+    {
+        productService.saveProduct(product);
+        return ResponseEntity.ok().body(product);
+    }
+ 
     
 }
