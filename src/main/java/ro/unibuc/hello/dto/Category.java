@@ -1,10 +1,13 @@
 package ro.unibuc.hello.dto;
 import java.util.List;
 
+@Document
 public class Category {
     private int categoryId;
     private String categoryName;
     private String categoryDescription;
+
+    @DBRef
     private List<Product> productList;
 
     public Category(int categoryId, String categoryName, String categoryDescription, List<Product> productList) {
