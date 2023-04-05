@@ -23,13 +23,13 @@ public class ProductController {
 
     
 
-    @PostMapping("/products")
+    // @PostMapping("/products")
  
-    public ResponseEntity<Product> saveProduct(Product product)
-    {
-        productService.saveProduct(product);
-        return ResponseEntity.ok().body(product);
-    }
+    // public ResponseEntity<Product> saveProduct(Product product)
+    // {
+    //     productService.saveProduct(product);
+    //     return ResponseEntity.ok().body(product);
+    // }
  
     
 }
